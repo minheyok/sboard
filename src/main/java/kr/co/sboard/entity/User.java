@@ -41,6 +41,5 @@ public class User {
         if(this.role == null){
             this.role = "USER";
         }
-
     }
 }

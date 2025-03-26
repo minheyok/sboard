@@ -263,6 +263,21 @@ document.addEventListener('DOMContentLoaded', function(){
                         return false;
                 }
 
+                // 7) 약관 동의 체크
+                document.addEventListener("DOMContentLoaded", function () {
+                        const btnNext = document.querySelector(".btnNext");
+
+                        btnNext.addEventListener("click", function (e) {
+                                const termsChecked = document.querySelector(".terms").checked;
+                                const privacyChecked = document.querySelector(".privacy").checked;
+
+                                if (!termsChecked || !privacyChecked) {
+                                        alert("사이트 이용약관과 개인정보 취급방침에 동의해야 합니다.");
+                                        e.preventDefault(); // 이동 방지
+                                }
+                        });
+                });
+
                 return true; // 폼 전송 시작
         }; // 최종 폼 전송 이벤트 끝
 });
