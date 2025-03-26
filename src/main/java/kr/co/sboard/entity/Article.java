@@ -4,10 +4,14 @@ package kr.co.sboard.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.LazyGroup;
 
 import java.time.LocalDateTime;
 
-@Getter
+
+
+
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
@@ -33,6 +37,10 @@ public class Article {
 
     @CreationTimestamp
     private LocalDateTime wdate;
+    
+    // 추가 필드
+    
+
 
     @PrePersist
     public void prePersist(){
