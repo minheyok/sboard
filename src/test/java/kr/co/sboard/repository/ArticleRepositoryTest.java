@@ -41,7 +41,7 @@ class ArticleRepositoryTest {
     @Test
     @Transactional
     public void test2(){
-      ArticleDTO articleDTO = articleService.finById(8);
+      ArticleDTO articleDTO = articleService.findById(8);
       System.out.println(articleDTO);
     }
 
